@@ -1,11 +1,11 @@
+use skia_bindings::{self as sb, GrDirectContext, GrDirectContext_DirectContextID, SkRefCntBase};
+use std::ffi::CString;
 use std::{
     fmt,
     ops::{Deref, DerefMut},
     ptr,
     time::Duration,
 };
-
-use skia_bindings::{self as sb, GrDirectContext, GrDirectContext_DirectContextID, SkRefCntBase};
 
 use crate::{
     gpu::{
@@ -350,6 +350,32 @@ impl DirectContext {
     //       introduced in m76, m77, and m79
     //       extended in m84 with finishedProc and finishedContext
     //       extended in m107 with label
+
+    pub fn create_backend_texture(
+        &mut self,
+        width: i32,
+        height: i32,
+        color_type: ColorType,
+        mipmapped: Mipmapped,
+        renderable: Renderable,
+        is_protected: Protected,
+        label: &str,
+    ) -> Option<BackendTexture> {
+        unsafe {
+            let label = CString::new(label).ok()?;
+            let texture = sb::C_GrDirectContext_createBackendTexture(
+                self.native_mut(),
+                width,
+                height,
+                color_type.into_native(),
+                mipmapped,
+                renderable,
+                is_protected,
+                label.as_ptr(),
+            );
+            BackendTexture::wrap(texture)
+        }
+    }
 
     // TODO: wrap updateBackendTexture (several variants)
     //       introduced in m84

@@ -159,6 +159,22 @@ extern "C" void C_GrDirectContext_flushAndSubmitImage(GrDirectContext* self, SkI
     self->flushAndSubmit(sp(image));
 }
 
+extern "C" GrBackendTexture* C_GrDirectContext_createBackendTexture(
+    GrDirectContext* self,
+    int width,
+    int height,
+    SkColorType skColorType,
+    skgpu::Mipmapped mipmapped,
+    GrRenderable renderable,
+    GrProtected isProtected,
+    const char* label
+    ) {
+    std::string_view lb(label);
+    auto backend = new GrBackendTexture();
+    *backend = self->createBackendTexture(width, height, skColorType, mipmapped, renderable, isProtected, lb);
+    return backend;
+}
+
 extern "C" void C_GrDirectContext_compressedBackendFormat(const GrDirectContext* self, SkTextureCompressionType compression, GrBackendFormat* result) {
     *result = self->compressedBackendFormat(compression);
 }

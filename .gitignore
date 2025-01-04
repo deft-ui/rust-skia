@@ -4,4 +4,6 @@ target/
 /cmake-build-debug/
 .direnv/
 /tmp/
+.idea/
+*.png
 
