@@ -107,13 +107,13 @@ fn main() {
 mod window {
     use cocoa::{appkit::NSView, base::id as cocoa_id};
     use core_graphics_types::geometry::CGSize;
-    use foreign_types_shared::ForeignType;
-    use metal_rs::{CommandQueue, Device, MTLPixelFormat, MetalLayer};
-    use objc::runtime::YES;
     use deft_skia_safe::{
         gpu::{self, mtl, DirectContext},
         Canvas, Color4f, Paint, Point, Rect,
     };
+    use foreign_types_shared::ForeignType;
+    use metal_rs::{CommandQueue, Device, MTLPixelFormat, MetalLayer};
+    use objc::runtime::YES;
     use winit::{
         dpi::{LogicalSize, Size},
         event_loop::ActiveEventLoop,

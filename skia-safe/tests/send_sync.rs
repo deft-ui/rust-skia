@@ -157,8 +157,8 @@ mod effects {
 
 #[cfg(feature = "gpu")]
 mod gpu {
-    use ganesh::MarkFrameBoundary;
     use deft_skia_safe::gpu::*;
+    use ganesh::MarkFrameBoundary;
     use static_assertions::*;
     assert_impl_all!(BackendFormat: Send, Sync);
     assert_impl_all!(BackendTexture: Send, Sync);
