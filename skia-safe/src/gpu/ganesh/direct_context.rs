@@ -7,6 +7,8 @@ use std::{
     time::Duration,
 };
 
+use crate::gpu::{Mipmapped, Protected, Renderable};
+use crate::wrapper::PointerWrapper;
 use crate::{
     gpu::{
         BackendFormat, BackendRenderTarget, BackendTexture, ContextOptions, FlushInfo,
@@ -14,7 +16,7 @@ use crate::{
         SubmitInfo, SyncCpu,
     },
     prelude::*,
-    surfaces, Data, Image, Surface, TextureCompressionType,
+    surfaces, ColorType, Data, Image, Surface, TextureCompressionType,
 };
 
 #[repr(C)]
@@ -351,6 +353,7 @@ impl DirectContext {
     //       extended in m84 with finishedProc and finishedContext
     //       extended in m107 with label
 
+    #[allow(clippy::too_many_arguments)]
     pub fn create_backend_texture(
         &mut self,
         width: i32,
