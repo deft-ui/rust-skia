@@ -36,7 +36,7 @@ extern crate lazy_static;
 // Prelude re-exports
 pub use crate::prelude::{Borrows, ConditionallySend, Handle, RCHandle, RefHandle, Sendable};
 
-/// All Sk* types are accessible via skia_safe::
+/// All Sk* types are accessible via deft_skia_safe::
 pub use crate::core::*;
 pub use docs::*;
 pub use effects::*;

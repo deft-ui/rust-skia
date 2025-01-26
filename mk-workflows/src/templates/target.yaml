@@ -3,7 +3,7 @@
   run: |
     rustup target add $[[target]]
 
-- name: 'Build skia-safe for $[[target]] with features $[[features]]'
+- name: 'Build deft-skia-safe for $[[target]] with features $[[features]]'
   shell: bash
   run: |
     if [ "$[[androidEnv]]" == "true" ]; then
@@ -20,7 +20,7 @@
       source /emsdk/emsdk_env.sh
     fi
     cargo clean
-    cargo build -p skia-safe --release --features "$[[features]]" --target $[[target]]
+    cargo build -p deft-skia-safe --release --features "$[[features]]" --target $[[target]]
     echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
     echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
     echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -66,7 +66,7 @@
   if: $[[releaseBinaries]]
   uses: pragmatrix/release-action@v1.11.1-rs
   with:
-    owner: rust-skia
+    owner: deft-ui
     repo: skia-binaries
     allowUpdates: true
     replacesArtifacts: true

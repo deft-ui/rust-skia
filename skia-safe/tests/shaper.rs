@@ -1,5 +1,5 @@
 #![cfg(feature = "textlayout")]
-use skia_safe::{
+use deft_skia_safe::{
     shaper::{
         run_handler::{Buffer, RunInfo},
         RunHandler,
@@ -47,7 +47,7 @@ impl RunHandler for DebugRunHandler {
 #[cfg(test)]
 mod tests {
     use crate::DebugRunHandler;
-    use skia_safe::{shapers, Font, Shaper};
+    use deft_skia_safe::{shapers, Font, Shaper};
 
     #[test]
     #[serial_test::serial]

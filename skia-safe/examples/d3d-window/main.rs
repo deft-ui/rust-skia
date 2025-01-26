@@ -95,7 +95,7 @@ mod window {
         window::{Window, WindowAttributes},
     };
 
-    use skia_safe::{
+    use deft_skia_safe::{
         gpu::{
             d3d::{BackendContext, TextureResourceInfo},
             surfaces, BackendRenderTarget, DirectContext, Protected, SurfaceOrigin,

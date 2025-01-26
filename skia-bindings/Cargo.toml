@@ -1,6 +1,6 @@
 [package]
 
-name = "skia-bindings"
+name = "deft-skia-bindings"
 description = "Skia Bindings for Rust"
 homepage = "https://github.com/rust-skia/rust-skia/tree/master/skia-bindings"
 repository = "https://github.com/rust-skia/rust-skia"

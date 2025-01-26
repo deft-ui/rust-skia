@@ -1,4 +1,4 @@
-use skia_safe::{color_filters, BlendMode, Color, ColorFilter, ConditionallySend, Sendable};
+use deft_skia_safe::{color_filters, BlendMode, Color, ColorFilter, ConditionallySend, Sendable};
 
 /// Test if RCHandle<> types can be wrapped into a Sendable and unwrapped.
 #[test]
@@ -17,7 +17,7 @@ fn sendable_implements_send() {
 }
 
 mod codec {
-    use skia_safe::{codec, codecs, Codec};
+    use deft_skia_safe::{codec, codecs, Codec};
     use static_assertions::*;
 
     // Codec seems to call into SkPngChunkReader*
@@ -33,7 +33,7 @@ mod codec {
 
 mod core {
     use contour_measure::{ForwardVerbIterator, VerbMeasure};
-    use skia_safe::*;
+    use deft_skia_safe::*;
     use static_assertions::*;
 
     assert_impl_all!(Arc: Send, Sync);
@@ -131,7 +131,7 @@ mod core {
 }
 
 mod docs {
-    use skia_safe::pdf;
+    use deft_skia_safe::pdf;
     use static_assertions::*;
 
     assert_impl_all!(pdf::AttributeList: Send, Sync);
@@ -142,7 +142,7 @@ mod docs {
 }
 
 mod effects {
-    use skia_safe::{gradient_shader, image_filters, runtime_effect, RuntimeEffect};
+    use deft_skia_safe::{gradient_shader, image_filters, runtime_effect, RuntimeEffect};
     use static_assertions::*;
 
     assert_impl_all!(runtime_effect::Uniform: Send, Sync);
@@ -158,7 +158,7 @@ mod effects {
 #[cfg(feature = "gpu")]
 mod gpu {
     use ganesh::MarkFrameBoundary;
-    use skia_safe::gpu::*;
+    use deft_skia_safe::gpu::*;
     use static_assertions::*;
     assert_impl_all!(BackendFormat: Send, Sync);
     assert_impl_all!(BackendTexture: Send, Sync);
@@ -197,7 +197,7 @@ mod gpu {
 
     #[cfg(feature = "gl")]
     mod gl {
-        use skia_safe::gpu::gl::*;
+        use deft_skia_safe::gpu::gl::*;
         use static_assertions::*;
         assert_impl_all!(Extensions: Send, Sync);
         // RC & mutable (extensions_mut() ... we could make this function unsafe)
@@ -209,7 +209,7 @@ mod gpu {
 
     #[cfg(feature = "metal")]
     mod mtl {
-        use skia_safe::gpu::mtl::*;
+        use deft_skia_safe::gpu::mtl::*;
         use static_assertions::*;
         assert_impl_all!(TextureInfo: Send, Sync);
         assert_impl_all!(SurfaceInfo: Send, Sync);
@@ -218,7 +218,7 @@ mod gpu {
 
     #[cfg(feature = "vulkan")]
     mod vulkan {
-        use skia_safe::gpu::vk::*;
+        use deft_skia_safe::gpu::vk::*;
         use static_assertions::*;
         // TODO: BackendContext is referencing get_proc and is used only temporarily for building
         //       the context.
@@ -239,7 +239,7 @@ mod gpu {
 
     #[cfg(feature = "d3d")]
     mod d3d {
-        use skia_safe::gpu::d3d::*;
+        use deft_skia_safe::gpu::d3d::*;
         use static_assertions::*;
         assert_impl_all!(BackendContext: Send, Sync);
         assert_impl_all!(TextureResourceInfo: Send, Sync);
@@ -252,7 +252,7 @@ mod gpu {
 
 #[cfg(feature = "textlayout")]
 mod textlayout {
-    use skia_safe::textlayout::*;
+    use deft_skia_safe::textlayout::*;
     use static_assertions::*;
 
     // RC _and_ mutable, forbid shared mutability.
@@ -284,7 +284,7 @@ mod textlayout {
 
 #[cfg(feature = "textlayout")]
 mod shaper {
-    use skia_safe::shaper::*;
+    use deft_skia_safe::shaper::*;
     use static_assertions::*;
     assert_impl_all!(Shaper: Send, Sync);
     assert_not_impl_any!(FontRunIterator: Send, Sync);
@@ -295,20 +295,20 @@ mod shaper {
 }
 
 mod pathops {
-    use skia_safe::OpBuilder;
+    use deft_skia_safe::OpBuilder;
     use static_assertions::*;
     assert_impl_all!(OpBuilder: Send, Sync);
 }
 
 mod svg {
-    use skia_safe::svg::*;
+    use deft_skia_safe::svg::*;
     use static_assertions::*;
     assert_not_impl_any!(Canvas: Send, Sync);
 }
 
 #[cfg(feature = "svg")]
 mod render_svg {
-    use skia_safe::svg::*;
+    use deft_skia_safe::svg::*;
     use static_assertions::*;
 
     assert_not_impl_any!(Dom: Send, Sync);
@@ -316,7 +316,7 @@ mod render_svg {
 }
 
 mod utils {
-    use skia_safe::utils::*;
+    use deft_skia_safe::utils::*;
     use static_assertions::*;
     assert_impl_all!(CustomTypefaceBuilder: Send, Sync);
     assert_not_impl_any!(OrderedFontMgr: Send, Sync);

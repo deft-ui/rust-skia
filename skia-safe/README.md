@@ -86,7 +86,7 @@ The Direct3D backend can be enabled for Windows targets by adding the feature `d
 
 The Cargo feature `textlayout` enables text shaping with Harfbuzz and ICU by providing bindings to the Skia modules skshaper and skparagraph. 
 
-The skshaper module can be accessed through `skia_safe::Shaper` and the Rust bindings for skparagraph are in the `skia_safe::textlayout` module. 
+The skshaper module can be accessed through `deft_skia_safe::Shaper` and the Rust bindings for skparagraph are in the `deft_skia_safe::textlayout` module. 
 
 ### `svg`
 
@@ -104,7 +104,7 @@ This feature enables support for rendering SVG files (`svg::Dom`).
 
 Usually when Skia is used on **Windows**, the file `icudtl.dat` must be available in your executable's directory. But if this default feature is enabled, the `icudtl.dat` file is directly embedded in Rust and is automatically initialized before any of the `textlayout` features are used.
 
-If this feature is disabled, the `icudtl.dat` file needs to be copied from the build's output directory to the executable's directory. If your executable directory is writable, this can be done by calling the function `skia_safe::icu::init()` before the `skia_safe::textlayout` module is used.
+If this feature is disabled, the `icudtl.dat` file needs to be copied from the build's output directory to the executable's directory. If your executable directory is writable, this can be done by calling the function `deft_skia_safe::icu::init()` before the `deft_skia_safe::textlayout` module is used.
 
 The output directory is displayed when skia-bindings is compiled with `cargo build -vv | grep "ninja: Entering directory"`, 
 

@@ -41,7 +41,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features '
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features '
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -58,7 +58,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -104,7 +104,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -118,7 +118,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features '
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features '
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -135,7 +135,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -181,7 +181,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -195,7 +195,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features '
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features '
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -212,7 +212,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -258,7 +258,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -272,7 +272,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features '
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features '
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -289,7 +289,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -335,7 +335,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -349,7 +349,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features '
+    - name: 'Build deft-skia-safe for i686-linux-android with features '
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -366,7 +366,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -412,7 +412,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -426,7 +426,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features '
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features '
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -443,7 +443,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -489,7 +489,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -528,7 +528,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features gl'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features gl'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -545,7 +545,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -591,7 +591,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -605,7 +605,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features gl'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features gl'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -622,7 +622,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -668,7 +668,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -682,7 +682,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features gl'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features gl'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -699,7 +699,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -745,7 +745,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -759,7 +759,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features gl'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features gl'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -776,7 +776,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -822,7 +822,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -836,7 +836,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features gl'
+    - name: 'Build deft-skia-safe for i686-linux-android with features gl'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -853,7 +853,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "gl" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -899,7 +899,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -913,7 +913,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features gl'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features gl'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -930,7 +930,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "gl" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -976,7 +976,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1015,7 +1015,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features vulkan'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1032,7 +1032,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "vulkan" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "vulkan" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1078,7 +1078,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1092,7 +1092,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features vulkan'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1109,7 +1109,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "vulkan" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "vulkan" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1155,7 +1155,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1169,7 +1169,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features vulkan'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -1186,7 +1186,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "vulkan" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "vulkan" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1232,7 +1232,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1246,7 +1246,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features vulkan'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -1263,7 +1263,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "vulkan" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "vulkan" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1309,7 +1309,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1323,7 +1323,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features vulkan'
+    - name: 'Build deft-skia-safe for i686-linux-android with features vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -1340,7 +1340,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "vulkan" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "vulkan" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1386,7 +1386,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1400,7 +1400,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features vulkan'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1417,7 +1417,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "vulkan" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "vulkan" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1463,7 +1463,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1502,7 +1502,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features textlayout'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1519,7 +1519,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "textlayout" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1565,7 +1565,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1579,7 +1579,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features textlayout'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1596,7 +1596,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "textlayout" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1642,7 +1642,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1656,7 +1656,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features textlayout'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features textlayout'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -1673,7 +1673,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "textlayout" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1719,7 +1719,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1733,7 +1733,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features textlayout'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features textlayout'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -1750,7 +1750,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "textlayout" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1796,7 +1796,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1810,7 +1810,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features textlayout'
+    - name: 'Build deft-skia-safe for i686-linux-android with features textlayout'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -1827,7 +1827,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "textlayout" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1873,7 +1873,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1887,7 +1887,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features textlayout'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1904,7 +1904,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "textlayout" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1950,7 +1950,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1989,7 +1989,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features gl,textlayout'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features gl,textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -2006,7 +2006,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,textlayout" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2052,7 +2052,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2066,7 +2066,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features gl,textlayout'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features gl,textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -2083,7 +2083,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,textlayout" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2129,7 +2129,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2143,7 +2143,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features gl,textlayout'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features gl,textlayout'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -2160,7 +2160,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2206,7 +2206,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2220,7 +2220,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features gl,textlayout'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features gl,textlayout'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -2237,7 +2237,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2283,7 +2283,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2297,7 +2297,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features gl,textlayout'
+    - name: 'Build deft-skia-safe for i686-linux-android with features gl,textlayout'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -2314,7 +2314,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2360,7 +2360,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2374,7 +2374,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features gl,textlayout'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features gl,textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -2391,7 +2391,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "gl,textlayout" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2437,7 +2437,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2476,7 +2476,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features textlayout,vulkan'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -2493,7 +2493,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout,vulkan" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2539,7 +2539,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2553,7 +2553,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features textlayout,vulkan'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -2570,7 +2570,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout,vulkan" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2616,7 +2616,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2630,7 +2630,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features textlayout,vulkan'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features textlayout,vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -2647,7 +2647,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout,vulkan" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2693,7 +2693,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2707,7 +2707,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features textlayout,vulkan'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features textlayout,vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -2724,7 +2724,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout,vulkan" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2770,7 +2770,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2784,7 +2784,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features textlayout,vulkan'
+    - name: 'Build deft-skia-safe for i686-linux-android with features textlayout,vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -2801,7 +2801,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout,vulkan" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2847,7 +2847,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2861,7 +2861,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features textlayout,vulkan'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -2878,7 +2878,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout,vulkan" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -2924,7 +2924,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -2963,7 +2963,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features gl,textlayout,vulkan'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features gl,textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -2980,7 +2980,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,vulkan" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3026,7 +3026,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3040,7 +3040,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features gl,textlayout,vulkan'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features gl,textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -3057,7 +3057,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,vulkan" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3103,7 +3103,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3117,7 +3117,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features gl,textlayout,vulkan'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features gl,textlayout,vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -3134,7 +3134,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,vulkan" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3180,7 +3180,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3194,7 +3194,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features gl,textlayout,vulkan'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features gl,textlayout,vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -3211,7 +3211,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,vulkan" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3257,7 +3257,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3271,7 +3271,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features gl,textlayout,vulkan'
+    - name: 'Build deft-skia-safe for i686-linux-android with features gl,textlayout,vulkan'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -3288,7 +3288,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,vulkan" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3334,7 +3334,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3348,7 +3348,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features gl,textlayout,vulkan'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features gl,textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -3365,7 +3365,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,vulkan" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3411,7 +3411,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3450,7 +3450,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features gl,x11'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features gl,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -3467,7 +3467,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,x11" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,x11" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3513,7 +3513,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3527,7 +3527,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features gl,x11'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features gl,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -3544,7 +3544,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,x11" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,x11" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3590,7 +3590,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3604,7 +3604,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features gl,x11'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features gl,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -3621,7 +3621,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,x11" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,x11" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3667,7 +3667,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3681,7 +3681,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features gl,x11'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features gl,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -3698,7 +3698,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,x11" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,x11" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3744,7 +3744,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3758,7 +3758,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features gl,x11'
+    - name: 'Build deft-skia-safe for i686-linux-android with features gl,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -3775,7 +3775,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,x11" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,x11" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3821,7 +3821,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3835,7 +3835,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features gl,x11'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features gl,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -3852,7 +3852,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,x11" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "gl,x11" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -3898,7 +3898,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -3937,7 +3937,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features gl,textlayout,x11'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features gl,textlayout,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -3954,7 +3954,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,x11" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,x11" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4000,7 +4000,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4014,7 +4014,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features gl,textlayout,x11'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features gl,textlayout,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -4031,7 +4031,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,x11" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,x11" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4077,7 +4077,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4091,7 +4091,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features gl,textlayout,x11'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features gl,textlayout,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -4108,7 +4108,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,x11" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,x11" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4154,7 +4154,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4168,7 +4168,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features gl,textlayout,x11'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features gl,textlayout,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -4185,7 +4185,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,x11" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,x11" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4231,7 +4231,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4245,7 +4245,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features gl,textlayout,x11'
+    - name: 'Build deft-skia-safe for i686-linux-android with features gl,textlayout,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -4262,7 +4262,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,x11" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,x11" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4308,7 +4308,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4322,7 +4322,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features gl,textlayout,x11'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features gl,textlayout,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -4339,7 +4339,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,x11" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,x11" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4385,7 +4385,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4424,7 +4424,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -4441,7 +4441,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4487,7 +4487,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4501,7 +4501,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -4518,7 +4518,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4564,7 +4564,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4578,7 +4578,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -4595,7 +4595,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4641,7 +4641,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4655,7 +4655,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -4672,7 +4672,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4718,7 +4718,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4732,7 +4732,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
+    - name: 'Build deft-skia-safe for i686-linux-android with features egl,gl,svg,textlayout,vulkan,wayland,webp,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -4749,7 +4749,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4795,7 +4795,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4809,7 +4809,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features egl,gl,textlayout,vulkan,wayland,webp,x11'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features egl,gl,textlayout,vulkan,wayland,webp,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -4826,7 +4826,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "egl,gl,textlayout,vulkan,wayland,webp,x11" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "egl,gl,textlayout,vulkan,wayland,webp,x11" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4872,7 +4872,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4911,7 +4911,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features gl,svg,textlayout,x11'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features gl,svg,textlayout,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -4928,7 +4928,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,x11" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,x11" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -4974,7 +4974,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -4988,7 +4988,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features gl,svg,textlayout,x11'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features gl,svg,textlayout,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -5005,7 +5005,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,x11" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,x11" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5051,7 +5051,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5065,7 +5065,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features gl,svg,textlayout,x11'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features gl,svg,textlayout,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -5082,7 +5082,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,x11" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,x11" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5128,7 +5128,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5142,7 +5142,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features gl,svg,textlayout,x11'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features gl,svg,textlayout,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -5159,7 +5159,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,x11" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,x11" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5205,7 +5205,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5219,7 +5219,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features gl,svg,textlayout,x11'
+    - name: 'Build deft-skia-safe for i686-linux-android with features gl,svg,textlayout,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -5236,7 +5236,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,x11" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,x11" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5282,7 +5282,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5296,7 +5296,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features gl,textlayout,x11'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features gl,textlayout,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -5313,7 +5313,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,x11" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,x11" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5359,7 +5359,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5398,7 +5398,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features gl,svg,textlayout,wayland,x11'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features gl,svg,textlayout,wayland,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -5415,7 +5415,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5461,7 +5461,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5475,7 +5475,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features gl,svg,textlayout,wayland,x11'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features gl,svg,textlayout,wayland,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -5492,7 +5492,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5538,7 +5538,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5552,7 +5552,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features gl,svg,textlayout,wayland,x11'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features gl,svg,textlayout,wayland,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -5569,7 +5569,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5615,7 +5615,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5629,7 +5629,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features gl,svg,textlayout,wayland,x11'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features gl,svg,textlayout,wayland,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -5646,7 +5646,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5692,7 +5692,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5706,7 +5706,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features gl,svg,textlayout,wayland,x11'
+    - name: 'Build deft-skia-safe for i686-linux-android with features gl,svg,textlayout,wayland,x11'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -5723,7 +5723,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,wayland,x11" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5769,7 +5769,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5783,7 +5783,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features gl,textlayout,wayland,x11'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features gl,textlayout,wayland,x11'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -5800,7 +5800,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,wayland,x11" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,wayland,x11" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5846,7 +5846,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5885,7 +5885,7 @@ jobs:
       run: |
         rustup target add x86_64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for x86_64-unknown-linux-gnu with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
+    - name: 'Build deft-skia-safe for x86_64-unknown-linux-gnu with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -5902,7 +5902,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target x86_64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target x86_64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -5948,7 +5948,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -5962,7 +5962,7 @@ jobs:
       run: |
         rustup target add aarch64-unknown-linux-gnu
 
-    - name: 'Build skia-safe for aarch64-unknown-linux-gnu with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
+    - name: 'Build deft-skia-safe for aarch64-unknown-linux-gnu with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -5979,7 +5979,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target aarch64-unknown-linux-gnu
+        cargo build -p deft-skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target aarch64-unknown-linux-gnu
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -6025,7 +6025,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -6039,7 +6039,7 @@ jobs:
       run: |
         rustup target add aarch64-linux-android
 
-    - name: 'Build skia-safe for aarch64-linux-android with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
+    - name: 'Build deft-skia-safe for aarch64-linux-android with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -6056,7 +6056,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target aarch64-linux-android
+        cargo build -p deft-skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target aarch64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -6102,7 +6102,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -6116,7 +6116,7 @@ jobs:
       run: |
         rustup target add x86_64-linux-android
 
-    - name: 'Build skia-safe for x86_64-linux-android with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
+    - name: 'Build deft-skia-safe for x86_64-linux-android with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -6133,7 +6133,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target x86_64-linux-android
+        cargo build -p deft-skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target x86_64-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -6179,7 +6179,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -6193,7 +6193,7 @@ jobs:
       run: |
         rustup target add i686-linux-android
 
-    - name: 'Build skia-safe for i686-linux-android with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
+    - name: 'Build deft-skia-safe for i686-linux-android with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
       shell: bash
       run: |
         if [ "true" == "true" ]; then
@@ -6210,7 +6210,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target i686-linux-android
+        cargo build -p deft-skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target i686-linux-android
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -6256,7 +6256,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -6270,7 +6270,7 @@ jobs:
       run: |
         rustup target add wasm32-unknown-emscripten
 
-    - name: 'Build skia-safe for wasm32-unknown-emscripten with features embed-freetype,freetype-woff2,textlayout,vulkan,webp'
+    - name: 'Build deft-skia-safe for wasm32-unknown-emscripten with features embed-freetype,freetype-woff2,textlayout,vulkan,webp'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -6287,7 +6287,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "embed-freetype,freetype-woff2,textlayout,vulkan,webp" --target wasm32-unknown-emscripten
+        cargo build -p deft-skia-safe --release --features "embed-freetype,freetype-woff2,textlayout,vulkan,webp" --target wasm32-unknown-emscripten
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -6333,7 +6333,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true

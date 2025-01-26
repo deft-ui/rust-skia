@@ -46,7 +46,7 @@ impl fmt::Debug for PathMeasure {
 /// Warning: Even if you pass in a `PathMeasure` with multiple contours, most of this struct's functions, including `length` only return the value for the first contour on the path (which is why they aren't `const`). You must exhaust `PathMeasure::next_contour`.
 ///
 /// ```
-/// use skia_safe::{PathMeasure, Point, Path};
+/// use deft_skia_safe::{PathMeasure, Point, Path};
 /// use std::f64::consts::PI;
 /// let mut path = Path::circle((0., 0.), 10.0, None);
 /// path.add_path(&Path::circle((100., 100.), 27.0, None), Point::default(), None);

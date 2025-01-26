@@ -1,4 +1,4 @@
-extern crate skia_safe;
+extern crate deft_skia_safe;
 
 mod canvas;
 use canvas::Canvas;

@@ -20,7 +20,7 @@ fn main() {
         window::WindowId,
     };
 
-    use skia_safe::{
+    use deft_skia_safe::{
         gpu::{self, backend_render_targets, mtl, SurfaceOrigin},
         scalar, ColorType,
     };
@@ -110,7 +110,7 @@ mod window {
     use foreign_types_shared::ForeignType;
     use metal_rs::{CommandQueue, Device, MTLPixelFormat, MetalLayer};
     use objc::runtime::YES;
-    use skia_safe::{
+    use deft_skia_safe::{
         gpu::{self, mtl, DirectContext},
         Canvas, Color4f, Paint, Point, Rect,
     };
@@ -196,7 +196,7 @@ mod window {
 
     /// Renders a rectangle that occupies exactly half of the canvas
     pub fn draw(canvas: &Canvas) {
-        let canvas_size = skia_safe::Size::from(canvas.base_layer_size());
+        let canvas_size = deft_skia_safe::Size::from(canvas.base_layer_size());
 
         canvas.clear(Color4f::new(1.0, 1.0, 1.0, 1.0));
 

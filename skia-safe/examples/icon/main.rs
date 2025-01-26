@@ -9,7 +9,7 @@
 
 use std::{fs::File, io::Write};
 
-use skia_safe::{surfaces, Color, EncodedImageFormat};
+use deft_skia_safe::{surfaces, Color, EncodedImageFormat};
 
 mod renderer;
 

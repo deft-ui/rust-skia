@@ -45,7 +45,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features '
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features '
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -62,7 +62,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -108,7 +108,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -151,7 +151,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features gl'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features gl'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -168,7 +168,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "gl" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -214,7 +214,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -257,7 +257,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features vulkan'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -274,7 +274,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "vulkan" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "vulkan" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -320,7 +320,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -363,7 +363,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features textlayout'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -380,7 +380,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "textlayout" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -426,7 +426,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -469,7 +469,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features gl,textlayout'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features gl,textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -486,7 +486,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "gl,textlayout" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -532,7 +532,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -575,7 +575,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features textlayout,vulkan'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -592,7 +592,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "textlayout,vulkan" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -638,7 +638,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -681,7 +681,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features gl,textlayout,vulkan'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features gl,textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -698,7 +698,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,textlayout,vulkan" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -744,7 +744,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -787,7 +787,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features d3d'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features d3d'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -804,7 +804,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "d3d" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "d3d" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -850,7 +850,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -893,7 +893,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features d3d,textlayout'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features d3d,textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -910,7 +910,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "d3d,textlayout" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "d3d,textlayout" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -956,7 +956,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -999,7 +999,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features d3d,gl,textlayout'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features d3d,gl,textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1016,7 +1016,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "d3d,gl,textlayout" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "d3d,gl,textlayout" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1062,7 +1062,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1105,7 +1105,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features gl,svg,textlayout'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features gl,svg,textlayout'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1122,7 +1122,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "gl,svg,textlayout" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "gl,svg,textlayout" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1168,7 +1168,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1211,7 +1211,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features d3d,gl,svg,textlayout,vulkan'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features d3d,gl,svg,textlayout,vulkan'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1228,7 +1228,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "d3d,gl,svg,textlayout,vulkan" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "d3d,gl,svg,textlayout,vulkan" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1274,7 +1274,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true
@@ -1317,7 +1317,7 @@ jobs:
       run: |
         rustup target add x86_64-pc-windows-msvc
 
-    - name: 'Build skia-safe for x86_64-pc-windows-msvc with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
+    - name: 'Build deft-skia-safe for x86_64-pc-windows-msvc with features embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp'
       shell: bash
       run: |
         if [ "false" == "true" ]; then
@@ -1334,7 +1334,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
-        cargo build -p skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target x86_64-pc-windows-msvc
+        cargo build -p deft-skia-safe --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
         echo "SKIA_STAGING_PATH=${BUILD_ARTIFACTSTAGINGDIRECTORY}" >> ${GITHUB_ENV}
@@ -1380,7 +1380,7 @@ jobs:
       if: true
       uses: pragmatrix/release-action@v1.11.1-rs
       with:
-        owner: rust-skia
+        owner: deft-ui
         repo: skia-binaries
         allowUpdates: true
         replacesArtifacts: true

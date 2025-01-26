@@ -63,7 +63,7 @@ fn main() {
         window::{Window, WindowAttributes},
     };
 
-    use skia_safe::{
+    use deft_skia_safe::{
         gpu::{self, backend_render_targets, gl::FramebufferInfo, SurfaceOrigin},
         Color, ColorType, Surface,
     };
@@ -152,7 +152,7 @@ fn main() {
             .display()
             .get_proc_address(CString::new(s).unwrap().as_c_str())
     });
-    let interface = skia_safe::gpu::gl::Interface::new_load_with(|name| {
+    let interface = deft_skia_safe::gpu::gl::Interface::new_load_with(|name| {
         if name == "eglGetCurrentDisplay" {
             return std::ptr::null();
         }
@@ -162,7 +162,7 @@ fn main() {
     })
     .expect("Could not create interface");
 
-    let mut gr_context = skia_safe::gpu::direct_contexts::make_gl(interface, None)
+    let mut gr_context = deft_skia_safe::gpu::direct_contexts::make_gl(interface, None)
         .expect("Could not create direct context");
 
     let fb_info = {
@@ -171,7 +171,7 @@ fn main() {
 
         FramebufferInfo {
             fboid: fboid.try_into().unwrap(),
-            format: skia_safe::gpu::gl::Format::RGBA8.into(),
+            format: deft_skia_safe::gpu::gl::Format::RGBA8.into(),
             ..Default::default()
         }
     };
@@ -179,7 +179,7 @@ fn main() {
     fn create_surface(
         window: &Window,
         fb_info: FramebufferInfo,
-        gr_context: &mut skia_safe::gpu::DirectContext,
+        gr_context: &mut deft_skia_safe::gpu::DirectContext,
         num_samples: usize,
         stencil_size: usize,
     ) -> Surface {
@@ -214,7 +214,7 @@ fn main() {
     struct Env {
         surface: Surface,
         gl_surface: GlutinSurface<WindowSurface>,
-        gr_context: skia_safe::gpu::DirectContext,
+        gr_context: deft_skia_safe::gpu::DirectContext,
         gl_context: PossiblyCurrentContext,
         window: Window,
     }

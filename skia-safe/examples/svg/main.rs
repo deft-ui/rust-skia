@@ -5,7 +5,7 @@ fn main() {
 
 #[cfg(feature = "svg")]
 fn main() {
-    use skia_safe::{
+    use deft_skia_safe::{
         svg::{Dom, Length, LengthUnit},
         Color, FontMgr,
     };

@@ -1,7 +1,7 @@
 //! Tests for the various image encoder and decoders skia-safe supports by default.
 use std::io;
 
-use skia_safe::{
+use deft_skia_safe::{
     codec::{self, codecs::Decoder},
     Bitmap, Codec, Data, EncodedImageFormat,
 };
