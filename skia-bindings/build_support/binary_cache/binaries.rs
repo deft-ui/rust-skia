@@ -115,6 +115,16 @@ pub fn download_url(url_template: String, tag: impl AsRef<str>, key: impl AsRef<
         .replace("{key}", key.as_ref())
 }
 
+pub fn save_cache(output_directory: &Path, tag: &str, key: &str, data: &Vec<u8>) -> io::Result<()> {
+    let path = output_directory.join(format!("{}-{}", tag, key));
+    fs::write(path, data)
+}
+
+pub fn load_cache(output_directory: &Path, tag: &str, key: &str) -> io::Result<Vec<u8>> {
+    let path = output_directory.join(format!("{}-{}", tag, key));
+    fs::read(path)
+}
+
 pub fn unpack(archive: impl Read, output_directory: &Path) -> io::Result<()> {
     let tar = GzDecoder::new(archive);
     // note: this creates the skia-bindings/ directory.
