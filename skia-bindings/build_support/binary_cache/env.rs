@@ -20,8 +20,12 @@ pub fn skia_binaries_url() -> Option<String> {
 
 /// The default URL template to download the binaries from.
 pub fn skia_binaries_url_default() -> String {
-    "https://github.com/deft-ui/skia-binaries/releases/download/{tag}/skia-binaries-{key}.tar.gz"
-        .into()
+    let mut dist_url = cargo::env_var("DEFT_DIST_URL")
+        .unwrap_or("https://github.com/deft-ui/skia-binaries/releases/download".to_string());
+    if dist_url.ends_with("/") {
+        dist_url = dist_url[..dist_url.len() - 1].to_string();
+    }
+    format!("{}/{}", dist_url, "{tag}/skia-binaries-{key}.tar.gz")
 }
 
 /// Force to build Skia, even if there is a binary available.
