@@ -148,7 +148,8 @@ pub fn try_prepare_download(binaries_config: &binaries_config::BinariesConfigura
                 &key,
             );
             println!("  FROM: {url}");
-            if let Err(e) = download_and_install(&tag, &key, url, &binaries_config.output_directory) {
+            if let Err(e) = download_and_install(&tag, &key, url, &binaries_config.output_directory)
+            {
                 println!("DOWNLOAD AND INSTALL FAILED: {e}");
                 if force_download {
                     panic!("Downloading of binaries was forced but failed.")
@@ -187,14 +188,19 @@ fn should_try_download_binaries(
     None
 }
 
-fn download_and_install(tag: &str, key: &str, url: impl AsRef<str>, output_directory: &Path) -> io::Result<()> {
+fn download_and_install(
+    tag: &str,
+    key: &str,
+    url: impl AsRef<str>,
+    output_directory: &Path,
+) -> io::Result<()> {
     let archive = {
         let mut cache = binaries::load_cache(output_directory, tag, key);
         match cache {
             Ok(content) => {
                 println!("BINARIES CACHE FOUND");
                 content
-            },
+            }
             Err(_err) => {
                 let downloaded = utils::download(url)?;
                 if let Err(err) = binaries::save_cache(output_directory, tag, key, &downloaded) {
