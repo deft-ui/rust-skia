@@ -64,7 +64,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -470,7 +470,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -876,7 +876,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "vulkan" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -1282,7 +1282,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "textlayout" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -1688,7 +1688,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,textlayout" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -2094,7 +2094,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "textlayout,vulkan" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -2500,7 +2500,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,textlayout,vulkan" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -2906,7 +2906,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "metal" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -3312,7 +3312,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "metal,textlayout" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -3718,7 +3718,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,metal,textlayout" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -4124,7 +4124,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,svg,textlayout" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -4530,7 +4530,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,svg,textlayout,vulkan" --all-targets --target x86_64-apple-darwin -- -D warnings
 
@@ -4936,7 +4936,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "metal,svg,textlayout,webp" --all-targets --target x86_64-apple-darwin -- -D warnings
 

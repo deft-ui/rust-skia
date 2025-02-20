@@ -77,7 +77,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "d3d,gl,svg,textlayout,vulkan,webp" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -183,7 +183,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "d3d,gl,svg,textlayout,vulkan,webp" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 

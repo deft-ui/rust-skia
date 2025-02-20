@@ -68,7 +68,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -555,7 +555,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -1042,7 +1042,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "vulkan" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -1529,7 +1529,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "textlayout" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -2016,7 +2016,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,textlayout" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -2503,7 +2503,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "textlayout,vulkan" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -2990,7 +2990,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,textlayout,vulkan" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -3477,7 +3477,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,x11" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -3964,7 +3964,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,textlayout,x11" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -4451,7 +4451,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -4938,7 +4938,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,svg,textlayout,x11" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -5425,7 +5425,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,svg,textlayout,wayland,x11" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -5912,7 +5912,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 

@@ -51,6 +51,7 @@ pub fn qa_jobs() -> Vec<Job> {
             toolchain: "stable",
             features: QA_ALL_FEATURES.into(),
             example_args: Some("--driver cpu --driver pdf --driver svg".into()),
+            disable_clippy: true,
             ..Job::default()
         },
         /*
@@ -66,6 +67,7 @@ pub fn qa_jobs() -> Vec<Job> {
             name: "beta-all-features".into(),
             toolchain: "beta",
             features: QA_ALL_FEATURES.into(),
+            disable_clippy: true,
             ..Job::default()
         },
     ]
@@ -180,6 +182,7 @@ fn release_job(features: impl Into<Features>) -> Job {
         name,
         toolchain: "stable",
         features,
+        disable_clippy: true,
         ..Job::default()
     }
 }

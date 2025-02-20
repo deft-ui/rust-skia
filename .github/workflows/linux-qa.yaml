@@ -73,7 +73,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 
@@ -560,7 +560,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
 

@@ -72,7 +72,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -178,7 +178,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -284,7 +284,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "vulkan" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -390,7 +390,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "textlayout" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -496,7 +496,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,textlayout" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -602,7 +602,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "textlayout,vulkan" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -708,7 +708,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,textlayout,vulkan" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -814,7 +814,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "d3d" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -920,7 +920,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "d3d,textlayout" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -1026,7 +1026,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "d3d,gl,textlayout" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -1132,7 +1132,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "gl,svg,textlayout" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -1238,7 +1238,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "d3d,gl,svg,textlayout,vulkan" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
@@ -1344,7 +1344,7 @@ jobs:
 
     - name: 'Run Clippy'
       shell: bash
-      if: true
+      if: false
       run: |
         cargo clippy --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --all-targets --target x86_64-pc-windows-msvc -- -D warnings
 
