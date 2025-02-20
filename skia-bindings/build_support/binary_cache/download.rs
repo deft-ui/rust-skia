@@ -139,8 +139,7 @@ impl binaries_config::BinariesConfiguration {
 /// Returns whether the prepared download needs to be built.
 pub fn try_prepare_download(binaries_config: &binaries_config::BinariesConfiguration) -> bool {
     env::force_skia_build() || {
-        let force_download = env::force_skia_binaries_download();
-        if let Some((tag, key)) = should_try_download_binaries(binaries_config, force_download) {
+        if let Some((tag, key)) = should_try_download_binaries(binaries_config) {
             println!("TRYING TO DOWNLOAD AND INSTALL SKIA BINARIES: {tag}/{key}");
             let url = binaries::download_url(
                 env::skia_binaries_url().unwrap_or_else(env::skia_binaries_url_default),
@@ -151,10 +150,7 @@ pub fn try_prepare_download(binaries_config: &binaries_config::BinariesConfigura
             if let Err(e) = download_and_install(&tag, &key, url, &binaries_config.output_directory)
             {
                 println!("DOWNLOAD AND INSTALL FAILED: {e}");
-                if force_download {
-                    panic!("Downloading of binaries was forced but failed.")
-                }
-                true
+                panic!("Downloading of binaries was forced but failed.")
             } else {
                 println!("DOWNLOAD AND INSTALL SUCCEEDED");
                 false
@@ -165,27 +161,27 @@ pub fn try_prepare_download(binaries_config: &binaries_config::BinariesConfigura
     }
 }
 
+fn get_binaries_in_crate(config: &binaries_config::BinariesConfiguration, tag: &str) -> Option<(String, String)> {
+    if let Ok(ref full_hash) = cargo::crate_repository_hash() {
+        let half_hash = git::trim_hash(full_hash);
+        Some((tag.to_string(), config.key(&half_hash)))
+    } else {
+        None
+    }
+}
+
 /// If the binaries should be downloaded, return the tag and key.
 fn should_try_download_binaries(
     config: &binaries_config::BinariesConfiguration,
-    force: bool,
 ) -> Option<(String, String)> {
     let tag = cargo::package_version();
-
-    // For testing:
-    if force {
-        // Retrieve the hash from the repository above.
-        let half_hash = git::half_hash()?;
-        return Some((tag, config.key(&half_hash)));
+    if let Some((tag, key)) = get_binaries_in_crate(config, &tag) {
+        return Some((tag, key));
     }
 
-    // Building inside a crate?
-    if let Ok(ref full_hash) = cargo::crate_repository_hash() {
-        let half_hash = git::trim_hash(full_hash);
-        return Some((tag, config.key(&half_hash)));
-    }
-
-    None
+    // Retrieve the hash from the repository above.
+    let half_hash = git::half_hash()?;
+    Some((tag, config.key(&half_hash)))
 }
 
 fn download_and_install(

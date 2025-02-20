@@ -54,6 +54,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -131,6 +132,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -208,6 +210,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -285,6 +288,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -362,6 +366,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -460,6 +465,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -537,6 +543,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -614,6 +621,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -691,6 +699,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -768,6 +777,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -866,6 +876,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "vulkan" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -943,6 +954,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "vulkan" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1020,6 +1032,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "vulkan" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1097,6 +1110,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "vulkan" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1174,6 +1188,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "vulkan" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1272,6 +1287,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1349,6 +1365,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1426,6 +1443,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1503,6 +1521,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1580,6 +1599,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1678,6 +1698,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1755,6 +1776,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1832,6 +1854,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1909,6 +1932,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -1986,6 +2010,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2084,6 +2109,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2161,6 +2187,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2238,6 +2265,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2315,6 +2343,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2392,6 +2421,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "textlayout,vulkan" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2490,6 +2520,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2567,6 +2598,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2644,6 +2676,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2721,6 +2754,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2798,6 +2832,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,textlayout,vulkan" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2896,6 +2931,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -2973,6 +3009,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3050,6 +3087,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3127,6 +3165,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3204,6 +3243,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3302,6 +3342,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,textlayout" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3379,6 +3420,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,textlayout" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3456,6 +3498,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,textlayout" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3533,6 +3576,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,textlayout" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3610,6 +3654,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,textlayout" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3708,6 +3753,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,metal,textlayout" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3785,6 +3831,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,metal,textlayout" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3862,6 +3909,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,metal,textlayout" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -3939,6 +3987,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,metal,textlayout" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4016,6 +4065,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,metal,textlayout" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4114,6 +4164,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4191,6 +4242,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4268,6 +4320,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4345,6 +4398,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4422,6 +4476,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4520,6 +4575,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,vulkan" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4597,6 +4653,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,vulkan" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4674,6 +4731,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,vulkan" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4751,6 +4809,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,vulkan" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4828,6 +4887,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "gl,svg,textlayout,vulkan" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -4926,6 +4986,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,svg,textlayout,webp" --target x86_64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -5003,6 +5064,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,svg,textlayout,webp" --target aarch64-apple-darwin
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -5080,6 +5142,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,svg,textlayout,webp" --target aarch64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -5157,6 +5220,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,svg,textlayout,webp" --target aarch64-apple-ios-sim
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -5234,6 +5298,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "metal,svg,textlayout,webp" --target x86_64-apple-ios
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}

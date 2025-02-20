@@ -67,6 +67,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "d3d,gl,svg,textlayout,vulkan,webp" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
@@ -173,6 +174,7 @@ jobs:
           source /emsdk/emsdk_env.sh
         fi
         cargo clean
+        export FORCE_SKIA_BUILD=1
         cargo build -p deft-skia-safe --release --features "d3d,gl,svg,textlayout,vulkan,webp" --target x86_64-pc-windows-msvc
         echo "SKIA_BINARIES_TAG=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/tag.txt")" >> ${GITHUB_ENV}
         echo "SKIA_BINARIES_KEY=$(cat "${BUILD_ARTIFACTSTAGINGDIRECTORY}/skia-binaries/key.txt")" >> ${GITHUB_ENV}
