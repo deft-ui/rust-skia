@@ -39,6 +39,7 @@
   shell: bash
   if: $[[runTests]]
   run: |
+    export FORCE_SKIA_BUILD=1
     cargo test --all --release --features "$[[features]]" --all-targets --target $[[target]] -- --nocapture
 
 - name: 'Generate skia-org example images'

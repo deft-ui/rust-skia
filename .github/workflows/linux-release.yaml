@@ -77,6 +77,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -155,6 +156,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -233,6 +235,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -311,6 +314,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -389,6 +393,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -467,6 +472,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -570,6 +576,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -648,6 +655,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -726,6 +734,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -804,6 +813,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -882,6 +892,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -960,6 +971,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1063,6 +1075,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "vulkan" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1141,6 +1154,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "vulkan" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1219,6 +1233,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "vulkan" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1297,6 +1312,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "vulkan" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1375,6 +1391,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "vulkan" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1453,6 +1470,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "vulkan" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1556,6 +1574,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1634,6 +1653,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1712,6 +1732,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1790,6 +1811,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1868,6 +1890,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1946,6 +1969,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2049,6 +2073,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2127,6 +2152,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2205,6 +2231,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2283,6 +2310,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2361,6 +2389,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2439,6 +2468,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2542,6 +2572,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout,vulkan" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2620,6 +2651,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout,vulkan" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2698,6 +2730,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout,vulkan" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2776,6 +2809,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout,vulkan" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2854,6 +2888,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout,vulkan" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -2932,6 +2967,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout,vulkan" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3035,6 +3071,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,vulkan" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3113,6 +3150,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,vulkan" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3191,6 +3229,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,vulkan" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3269,6 +3308,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,vulkan" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3347,6 +3387,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,vulkan" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3425,6 +3466,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,vulkan" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3528,6 +3570,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,x11" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3606,6 +3649,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,x11" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3684,6 +3728,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,x11" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3762,6 +3807,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,x11" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3840,6 +3886,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,x11" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -3918,6 +3965,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,x11" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4021,6 +4069,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,x11" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4099,6 +4148,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,x11" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4177,6 +4227,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,x11" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4255,6 +4306,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,x11" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4333,6 +4385,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,x11" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4411,6 +4464,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,x11" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4514,6 +4568,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4592,6 +4647,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4670,6 +4726,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4748,6 +4805,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4826,6 +4884,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -4904,6 +4963,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "egl,gl,textlayout,vulkan,wayland,webp,x11" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5007,6 +5067,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,x11" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5085,6 +5146,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,x11" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5163,6 +5225,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,x11" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5241,6 +5304,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,x11" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5319,6 +5383,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,x11" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5397,6 +5462,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,x11" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5500,6 +5566,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,wayland,x11" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5578,6 +5645,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,wayland,x11" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5656,6 +5724,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,wayland,x11" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5734,6 +5803,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,wayland,x11" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5812,6 +5882,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout,wayland,x11" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5890,6 +5961,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,wayland,x11" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -5993,6 +6065,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --all-targets --target x86_64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -6071,6 +6144,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --all-targets --target aarch64-unknown-linux-gnu -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -6149,6 +6223,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --all-targets --target aarch64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -6227,6 +6302,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --all-targets --target x86_64-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -6305,6 +6381,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --all-targets --target i686-linux-android -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -6383,6 +6460,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "embed-freetype,freetype-woff2,textlayout,vulkan,webp" --all-targets --target wasm32-unknown-emscripten -- --nocapture
 
     - name: 'Generate skia-org example images'

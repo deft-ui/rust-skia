@@ -81,6 +81,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -188,6 +189,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -295,6 +297,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "vulkan" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -402,6 +405,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -509,6 +513,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -616,6 +621,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "textlayout,vulkan" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -723,6 +729,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,textlayout,vulkan" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -830,6 +837,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "d3d" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -937,6 +945,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "d3d,textlayout" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1044,6 +1053,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "d3d,gl,textlayout" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1151,6 +1161,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,svg,textlayout" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1258,6 +1269,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "d3d,gl,svg,textlayout,vulkan" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -1365,6 +1377,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "embed-freetype,freetype-woff2,svg,textlayout,vulkan,webp" --all-targets --target x86_64-pc-windows-msvc -- --nocapture
 
     - name: 'Generate skia-org example images'

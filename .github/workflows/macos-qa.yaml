@@ -78,6 +78,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target x86_64-apple-darwin -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -156,6 +157,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target aarch64-apple-darwin -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -234,6 +236,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target aarch64-apple-ios -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -312,6 +315,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target aarch64-apple-ios-sim -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -390,6 +394,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target x86_64-apple-ios -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -489,6 +494,7 @@ jobs:
       shell: bash
       if: true
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target x86_64-apple-darwin -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -567,6 +573,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target aarch64-apple-darwin -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -645,6 +652,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target aarch64-apple-ios -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -723,6 +731,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target aarch64-apple-ios-sim -- --nocapture
 
     - name: 'Generate skia-org example images'
@@ -801,6 +810,7 @@ jobs:
       shell: bash
       if: false
       run: |
+        export FORCE_SKIA_BUILD=1
         cargo test --all --release --features "gl,metal,svg,textlayout,vulkan,webp" --all-targets --target x86_64-apple-ios -- --nocapture
 
     - name: 'Generate skia-org example images'
