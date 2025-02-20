@@ -18,7 +18,7 @@ categories = [
 ]
 license = "MIT"
 
-version = "0.81.1"
+version = "0.81.2"
 authors = ["Armin Sander <armin@replicator.org>"]
 edition = "2021"
 rust-version.workspace = true
