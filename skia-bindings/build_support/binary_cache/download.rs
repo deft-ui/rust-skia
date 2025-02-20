@@ -161,7 +161,10 @@ pub fn try_prepare_download(binaries_config: &binaries_config::BinariesConfigura
     }
 }
 
-fn get_binaries_in_crate(config: &binaries_config::BinariesConfiguration, tag: &str) -> Option<(String, String)> {
+fn get_binaries_in_crate(
+    config: &binaries_config::BinariesConfiguration,
+    tag: &str,
+) -> Option<(String, String)> {
     if let Ok(ref full_hash) = cargo::crate_repository_hash() {
         let half_hash = git::trim_hash(full_hash);
         Some((tag.to_string(), config.key(&half_hash)))
