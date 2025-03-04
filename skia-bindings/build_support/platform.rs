@@ -17,6 +17,7 @@ pub mod ios;
 pub mod linux;
 pub mod macos;
 mod windows;
+mod ohos;
 
 pub fn uses_freetype(config: &BuildConfiguration) -> bool {
     details(&config.target).uses_freetype(config)
@@ -71,6 +72,7 @@ fn details(target: &Target) -> &dyn PlatformDetails {
     match target.as_strs() {
         ("wasm32", "unknown", "emscripten", _) => &emscripten::Emscripten,
         (_, "linux", "android", _) | (_, "linux", "androideabi", _) => &android::Android,
+        (_, "unknown", "linux", Some("ohos")) => &ohos::Ohos,
         (_, "apple", "darwin", _) => &macos::MacOs,
         (_, "apple", "ios", _) => &ios::Ios,
         (_, _, "windows", Some("msvc")) if host.is_windows() => &windows::Msvc,
