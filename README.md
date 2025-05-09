@@ -331,3 +331,4 @@ More details can be found at [CONTRIBUTING.md](https://github.com/rust-skia/rust
 ## License
 
 MIT
+
