@@ -40,8 +40,8 @@ jobs:
     - name: Python Version
       run: python --version
 
-    - name: Upgrade LLVM
-      run: choco upgrade llvm
+    #- name: Upgrade LLVM
+    #  run: choco upgrade llvm
 
     - name: Install Ninja
       run: choco install ninja
@@ -91,12 +91,12 @@ jobs:
 
     - name: 'Generate skia-org example images'
       shell: bash
-      if: true
+      if: false
       run: |
-        cargo run --release --features "d3d,gl,svg,textlayout,vulkan,webp" --target x86_64-pc-windows-msvc "${{ env.SKIA_STAGING_PATH }}/skia-org" --driver cpu --driver pdf --driver svg
+        cargo run --release --features "d3d,gl,svg,textlayout,vulkan,webp" --target x86_64-pc-windows-msvc "${{ env.SKIA_STAGING_PATH }}/skia-org" 
 
     - name: 'Upload skia-org example images'
-      if: true
+      if: false
       uses: actions/upload-artifact@v4
       with:
         name: skia-org-images-x86_64-pc-windows-msvc
@@ -148,8 +148,8 @@ jobs:
     - name: Python Version
       run: python --version
 
-    - name: Upgrade LLVM
-      run: choco upgrade llvm
+    #- name: Upgrade LLVM
+    #  run: choco upgrade llvm
 
     - name: Install Ninja
       run: choco install ninja

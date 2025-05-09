@@ -21,8 +21,8 @@ steps:
 - name: Python Version
   run: python --version
 
-- name: Upgrade LLVM
-  run: choco upgrade llvm
+#- name: Upgrade LLVM
+#  run: choco upgrade llvm
 
 - name: Install Ninja
   run: choco install ninja
