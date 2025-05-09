@@ -87,12 +87,12 @@ jobs:
 
     - name: 'Generate skia-org example images'
       shell: bash
-      if: true
+      if: false
       run: |
-        cargo run --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target x86_64-unknown-linux-gnu "${{ env.SKIA_STAGING_PATH }}/skia-org" --driver cpu --driver pdf --driver svg
+        cargo run --release --features "egl,gl,svg,textlayout,vulkan,wayland,webp,x11" --target x86_64-unknown-linux-gnu "${{ env.SKIA_STAGING_PATH }}/skia-org" 
 
     - name: 'Upload skia-org example images'
-      if: true
+      if: false
       uses: actions/upload-artifact@v4
       with:
         name: skia-org-images-x86_64-unknown-linux-gnu

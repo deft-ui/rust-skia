@@ -50,7 +50,7 @@ pub fn qa_jobs() -> Vec<Job> {
             name: "stable-all-features".into(),
             toolchain: "stable",
             features: QA_ALL_FEATURES.into(),
-            example_args: Some("--driver cpu --driver pdf --driver svg".into()),
+            // example_args: Some("--driver cpu --driver pdf --driver svg".into()),
             disable_clippy: true,
             ..Job::default()
         },
