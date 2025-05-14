@@ -194,17 +194,15 @@ fn download_and_install(
     output_directory: &Path,
 ) -> io::Result<()> {
     let archive = {
-        let mut cache = binaries::load_cache(output_directory, tag, key);
+        let mut cache = binaries::load_cache(tag, key);
         match cache {
-            Ok(content) => {
+            Some(content) => {
                 println!("BINARIES CACHE FOUND");
                 content
             }
-            Err(_err) => {
+            None => {
                 let downloaded = utils::download(url)?;
-                if let Err(err) = binaries::save_cache(output_directory, tag, key, &downloaded) {
-                    println!("SAVE BINARIES CACHE FAILED: {err}");
-                }
+                binaries::save_cache(tag, key, &downloaded);
                 downloaded
             }
         }

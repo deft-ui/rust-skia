@@ -3,12 +3,7 @@
 use super::{git, github_actions};
 use crate::build_support::{binaries_config, cargo};
 use flate2::read::GzDecoder;
-use std::{
-    collections::HashSet,
-    fs,
-    io::{self, Read, Write},
-    path::{Path, PathBuf},
-};
+use std::{collections::HashSet, env, fs, io::{self, Read, Write}, path::{Path, PathBuf}};
 
 /// Export binaries if we are inside a git repository _and_
 /// the artifact staging directory is set.
@@ -115,14 +110,27 @@ pub fn download_url(url_template: String, tag: impl AsRef<str>, key: impl AsRef<
         .replace("{key}", key.as_ref())
 }
 
-pub fn save_cache(output_directory: &Path, tag: &str, key: &str, data: &Vec<u8>) -> io::Result<()> {
-    let path = output_directory.join(format!("{}-{}", tag, key));
-    fs::write(path, data)
+fn get_build_cache_dir() -> Option<PathBuf> {
+    let p = Path::new(&env::var("DEFT_BUILD_CACHE").ok()?)
+        .to_path_buf();
+    Some(p)
 }
 
-pub fn load_cache(output_directory: &Path, tag: &str, key: &str) -> io::Result<Vec<u8>> {
-    let path = output_directory.join(format!("{}-{}", tag, key));
-    fs::read(path)
+pub fn save_cache(tag: &str, key: &str, data: &Vec<u8>) {
+    let cache_dir = match get_build_cache_dir() {
+        Some(cache_dir) => cache_dir,
+        None => return,
+    };
+    let path = cache_dir.join(format!("{}-{}", tag, key));
+    if let Err(err) = fs::write(path, data) {
+        println!("BINARIES CACHE FAILED: {}", err);
+    }
+}
+
+pub fn load_cache(tag: &str, key: &str) -> Option<Vec<u8>> {
+    let cache_dir = get_build_cache_dir()?;
+    let path = cache_dir.join(format!("{}-{}", tag, key));
+    fs::read(path).ok()
 }
 
 pub fn unpack(archive: impl Read, output_directory: &Path) -> io::Result<()> {
